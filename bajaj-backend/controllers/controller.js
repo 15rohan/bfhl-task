@@ -5,14 +5,7 @@ const getOpCode = async (req, res) => {
 }
 
 const sendDetails = async (req, res) => {
-    let { data } = req.body
-
-    try {
-        data = JSON.parse(data.replace(/“/g, '"').replace(/”/g, '"'));
-    } catch (error) {
-        return res.status(400).json({ error: 'Invalid data format' });
-    }
-
+    let { data } = req.body 
 
     const numbers = []
     const alphabets = []
@@ -36,7 +29,7 @@ const sendDetails = async (req, res) => {
     const details = {
         is_success: true,
         user_id: "rohan_singhal_15102002",
-        email: "rohan,sinnghal2021@vitstudent.ac.in",
+        email: "rohan.singhal2021@vitstudent.ac.in",
         roll_number: "21BCE5923",
         numbers: numbers,
         alphabets: alphabets,
